@@ -1,0 +1,10 @@
+.Header {
+    height: 48px;
+    background-color: #222;
+    padding: 10px;
+    color: white;
+}
+
+h2 {
+    line-height: 10px;
+}

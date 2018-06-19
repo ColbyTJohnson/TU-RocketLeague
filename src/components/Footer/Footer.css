@@ -13,9 +13,9 @@
 }
 
 .App-footer {
+    font-size: 1.1em;
     background-color: #222;
     height: 120px;
-    padding: 20px;
     color: white;
     text-align: center;
 }
