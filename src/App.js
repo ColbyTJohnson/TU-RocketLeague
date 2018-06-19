@@ -6,14 +6,14 @@ import Footer from './components/Footer';
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <div>
+            <body className="App">
+                <div className="App-content">
                     <p>
                         Welcome to TU | Rocket League's home page!
                     </p>
                 </div>
                 <Footer />
-            </div>
+            </body>
         );
     }
 }
