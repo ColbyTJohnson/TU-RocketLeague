@@ -7,7 +7,7 @@ import Header from './components/Header/Header';
 class App extends Component {
     render() {
         return (
-            <body className="App">
+            <div className="App">
                 <Header />
                     <div className="App-content">
                         <p>
@@ -15,7 +15,7 @@ class App extends Component {
                         </p>
                     </div>
                 <Footer />
-            </body>
+            </div>
         );
     }
 }
