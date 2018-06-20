@@ -5,9 +5,9 @@ import './CardView.css';
 
 const cardView = () => (
     <div className="CardView">
-        <PlayerCard />
-        <PlayerCard />
-        <PlayerCard />
+        <PlayerCard name={"Cierex"} />
+        <PlayerCard name={"s a d b o y"} />
+        <PlayerCard name={"Zenlos"} />
     </div>
 );
 
