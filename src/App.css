@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.05), #000), url(./assets/ball_bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), #000), url(./assets/stadium_bg.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;

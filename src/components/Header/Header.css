@@ -8,8 +8,8 @@
     align-items: center;
 }
 
-h2 {
-    line-height: 10px;
+.App-title {
+    font-size: 150%;
 }
 
 .RLS {

@@ -1,3 +1,43 @@
 .Card {
+    background-color: rgba(73, 73, 73, 0.7);
+    margin: 2%;
+    padding: 0 10px;
+    height: 480px;
+    width: 360px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
 
+.Player-header {
+    margin-top: 3%;
+    height: 280px;
+    width: 99%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 20px;
+    border: 2px solid #222222;
+}
+
+.Photo {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Player-name {
+    height: 50px;
+    background-color: rgba(110, 0, 16, 0.7);
+    margin-top: -6px;
+    border: 2px solid #222222;
+    text-align: center;
+    padding: 0;
+    border-radius: 0 0 20px 20px;
+}
+
+.Name {
+    margin: 0;
+    font-size: 120%;
+    line-height: 45px;
 }
