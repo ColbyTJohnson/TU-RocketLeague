@@ -1,10 +1,18 @@
 .Header {
     height: 48px;
-    background-color: #a41e35;
+    background-color: #222;
     padding: 10px;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h2 {
     line-height: 10px;
+}
+
+.RLS {
+    cursor: pointer;
+    height: 30px;
 }

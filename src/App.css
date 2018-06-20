@@ -3,9 +3,16 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), #000), url(./assets/ball_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 0;
+    background-attachment: fixed;
 }
 
 .App-content {
+    color: white;
     flex: 1 0 auto;
     width: 100%;
 }
