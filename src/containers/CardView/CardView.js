@@ -23,7 +23,7 @@ const cardView = () => (
         <PlayerCard
             name={"Zenlos"}
             img={zenlos}
-            rank={ranks.champ_1} />
+            rank={ranks.champ_2} />
     </div>
 );
 
