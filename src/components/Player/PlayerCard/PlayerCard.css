@@ -15,7 +15,7 @@
     width: 99%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     border: 2px solid #6e0010;
 }
 
@@ -33,11 +33,35 @@
     border: 2px solid #6e0010;
     text-align: center;
     padding: 0;
-    border-radius: 0 0 20px 20px;
 }
 
 .Name {
     margin: 0;
     font-size: 120%;
     line-height: 45px;
+}
+
+.Player-stats {
+    background-color: rgba(34, 34, 34, 0.8);
+    color: #eee;
+    display: block;
+    border-radius: 0 0 20px 20px;
+    line-height: 14px;
+    height: 192px;
+    width: 96%;
+    margin-top: 8px;
+    border: 3px solid #6e0010;
+    padding-left: 2%;
+}
+
+.Ranks {
+    margin: 0;
+    line-height: 20px;
+    width: 40%;
+}
+
+.Rank-icon {
+    width: 38px;
+    float: right;
+    margin-top: -10px;
 }
