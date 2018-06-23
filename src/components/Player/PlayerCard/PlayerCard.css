@@ -1,5 +1,5 @@
 .Card {
-    background-color: rgba(73, 73, 73, 0.7);
+    background-color: rgba(73, 73, 73, 0.8);
     margin: 2%;
     padding: 0 10px;
     height: 480px;
@@ -11,12 +11,12 @@
 
 .Player-header {
     margin-top: 3%;
-    height: 280px;
+    height: 250px;
     width: 99%;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 20px;
-    border: 2px solid #222222;
+    border: 2px solid #6e0010;
 }
 
 .Photo {
@@ -28,9 +28,9 @@
 
 .Player-name {
     height: 50px;
-    background-color: rgba(110, 0, 16, 0.7);
+    background-color: rgba(164, 30, 53, 0.8);
     margin-top: -6px;
-    border: 2px solid #222222;
+    border: 2px solid #6e0010;
     text-align: center;
     padding: 0;
     border-radius: 0 0 20px 20px;
