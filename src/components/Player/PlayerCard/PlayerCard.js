@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import Playstyle from './Playstyle/Playstyle';
 import './PlayerCard.css';
 
 class playerCard extends Component {
@@ -13,17 +14,25 @@ class playerCard extends Component {
                     </div>
                 </div>
                 <div className="Player-stats">
-                    <h4>Ranks</h4>
                     <div className="Ranks">
-                        <p>Solo: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
-                        <p>Doubles: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
-                        <p>Standard: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
-                        <p>Solo Standard: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
+                        <h4>Ranks</h4>
+                        <hr/>
+                        <div className="Rank-list">
+                            <p>Solo: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
+                            <p>Doubles: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
+                            <p>Standard: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
+                            <p>Solo Standard: <img src={this.props.rank} alt="rank" className="Rank-icon" /></p>
+                        </div>
+                    </div>
+                    <div className="Playstyle">
+                        <h4>Playstyle</h4>
+                        <hr/>
+                        <Playstyle />
                     </div>
                 </div>
             </div>
         );
     }
-};
+}
 
 export default playerCard;

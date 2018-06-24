@@ -6,7 +6,7 @@
     width: 360px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .Player-header {
@@ -44,7 +44,6 @@
 .Player-stats {
     background-color: rgba(34, 34, 34, 0.8);
     color: #eee;
-    display: block;
     border-radius: 0 0 20px 20px;
     line-height: 14px;
     height: 192px;
@@ -55,13 +54,44 @@
 }
 
 .Ranks {
-    margin: 0;
+    float: left;
+    margin-top: 4px;
+    padding: 0 8px 0 12px;
     line-height: 20px;
     width: 40%;
+    background-color: rgba(273, 273, 273, 0.15);
+    border-radius: 0 0 0 16px;
+    height: 184px;
 }
 
 .Rank-icon {
     width: 38px;
     float: right;
     margin-top: -10px;
+}
+
+.Ranks h4 {
+    margin: 0 0 -6px 0;
+    padding-top: 8px;
+}
+
+.Rank-list {
+    margin-top: -8px;
+    padding-bottom: 1px;
+}
+
+.Playstyle {
+    float: right;
+    margin: 4px 6px 0 0;
+    padding: 0 8px 0 12px;
+    line-height: 20px;
+    width: 45%;
+    background-color: rgba(273, 273, 273, 0.15);
+    border-radius: 0 0 16px 0;
+    height: 184px;
+}
+
+.Playstyle h4 {
+    margin: 0 0 -6px 0;
+    padding-top: 8px;
 }
