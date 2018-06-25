@@ -50,7 +50,7 @@
     width: 96%;
     margin-top: 8px;
     border: 3px solid #6e0010;
-    padding-left: 2%;
+    padding-left: 1%;
 }
 
 .Ranks {
@@ -82,10 +82,10 @@
 
 .Playstyle {
     float: right;
-    margin: 4px 6px 0 0;
+    margin: 4px 4px 0 0;
     padding: 0 8px 0 12px;
     line-height: 20px;
-    width: 45%;
+    width: 46%;
     background-color: rgba(273, 273, 273, 0.15);
     border-radius: 0 0 16px 0;
     height: 184px;

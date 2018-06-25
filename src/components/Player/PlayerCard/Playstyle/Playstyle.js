@@ -1,7 +1,7 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
 
-const playstyle = () => (
+const playstyle = (props) => (
     <ResponsivePie
         data={[
             {
@@ -14,42 +14,41 @@ const playstyle = () => (
                 "id": "Assists",
                 "label": "Assists",
                 "value": 578,
-                "color": "hsl(291, 70%, 50%)"
+                "color": "hsl(355, 65%, 59%)"
             },
             {
                 "id": "Saves",
                 "label": "Saves",
                 "value": 357,
-                "color": "hsl(201, 70%, 50%)"
+                "color": "hsl(351, 100%, 22%)"
             }
         ]}
         margin={{
             "top": -25,
-            "right": 12,
-            "bottom": 20,
+            "right": 14,
+            "bottom": 22,
             "left": 12
         }}
         innerRadius={0.3}
         cornerRadius={7}
         padAngle={5}
         colorBy="id"
+        colors={[
+            "hsl(350, 69%, 38%)",
+            "hsl(355, 65%, 59%)",
+            "hsl(351, 100%, 22%)"
+        ]}
         borderWidth={3}
         borderColor="inherit:darker(0.5)"
         enableRadialLabels={false}
         slicesLabelsSkipAngle={10}
-        slicesLabelsTextColor="#333"
+        slicesLabelsTextColor="#def"
         animate={true}
         motionStiffness={90}
         motionDamping={15}
         theme={{
             "tooltip": {
-                "container": {
-                    "fontSize": "13px",
-                    "textColor": "#222"
-                }
-            },
-            "labels": {
-                "textColor": "#222"
+                "color": "hsl(0, 0%, 13%)"
             }
         }}
     />
