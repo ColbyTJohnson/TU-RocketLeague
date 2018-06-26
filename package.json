@@ -6,7 +6,9 @@
     "@nivo/pie": "^0.42.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
     "rls-api": "^1.1.0"
   },
   "scripts": {
