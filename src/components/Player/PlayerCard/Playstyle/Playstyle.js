@@ -7,19 +7,19 @@ const playstyle = (props) => (
             {
                 "id": "Goals",
                 "label": "Goals",
-                "value": 84,
+                "value": props.goals,
                 "color": "hsl(350, 69%, 38%)"
             },
             {
                 "id": "Assists",
                 "label": "Assists",
-                "value": 578,
+                "value": props.assists,
                 "color": "hsl(355, 65%, 59%)"
             },
             {
                 "id": "Saves",
                 "label": "Saves",
-                "value": 357,
+                "value": props.saves,
                 "color": "hsl(351, 100%, 22%)"
             }
         ]}

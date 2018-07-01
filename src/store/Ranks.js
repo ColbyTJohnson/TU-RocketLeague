@@ -1,3 +1,4 @@
+import unranked from '../assets/ranks/unranked.png';
 import bronze_1 from '../assets/ranks/Bronze/Bronze_1.png';
 import bronze_2 from '../assets/ranks/Bronze/Bronze_2.png';
 import bronze_3 from '../assets/ranks/Bronze/Bronze_3.png';
@@ -19,6 +20,7 @@ import champ_3 from '../assets/ranks/Champion/Champion_3.png';
 import gc from '../assets/ranks/Champion/GrandChampion.png';
 
 const ranks = {
+    unranked,
     bronze_1,
     bronze_2,
     bronze_3,

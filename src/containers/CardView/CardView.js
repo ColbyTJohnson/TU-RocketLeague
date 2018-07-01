@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import rls from 'rls-api';
 import 'whatwg-fetch';
 
 import PlayerCard from '../../components/Player/PlayerCard/PlayerCard';
@@ -10,24 +9,33 @@ import cierex from '../../assets/cie.jpg';
 import sadboy from '../../assets/sad.jpg';
 import zenlos from '../../assets/zen.jpg';
 
-import ranks from '../../store/Ranks';
-
-
 class CardView extends Component {
     state = {
-            sadboyGoals: 0,
-            sadboyAssists: 0,
-            sadboySaves: 0,
-            loading: false,
+        sadboyGoals: 0,
+        sadboyAssists: 0,
+        sadboySaves: 0,
+        sadboySoloRank: 0,
+        sadboyDoublesRank: 0,
+        sadboyStandardRank: 0,
+        sadboySSRank: 0,
+        zenlosGoals: 0,
+        zenlosAssists: 0,
+        zenlosSaves: 0,
+        zenlosSoloRank: 0,
+        zenlosDoublesRank: 0,
+        zenlosStandardRank: 0,
+        zenlosSSRank: 0,
+        cierexGoals: 0,
+        cierexAssists: 0,
+        cierexSaves: 0,
+        cierexSoloRank: 0,
+        cierexDoublesRank: 0,
+        cierexStandardRank: 0,
+        cierexSSRank: 0,
+        loading: true,
     };
 
     componentDidMount () {
-        let client = new rls.Client({
-            token: Keys.rlsToken
-        });
-
-        console.log("Before fetch: " + this.state.sadboyGoals);
-
         fetch('https://api.rocketleaguestats.com/v1/player/batch', {
             method: 'POST',
             headers: {
@@ -43,73 +51,84 @@ class CardView extends Component {
                     {
                         "platformId": "1",
                         "uniqueId": "76561198073429696",
+                    },
+                    {
+                        "platformId": "1",
+                        "uniqueId": "76561198067709994",
                     }
                 ])
         }).then(res => {
-            console.log("In response: " + (res));
-            // return this.setState({ sadboyGoals: res.stats });
+            return res.json();
+        }).then(res => {
+            this.setState({
+                sadboyGoals: res[0].stats.goals,
+                sadboyAssists: res[0].stats.assists,
+                sadboySaves: res[0].stats.saves,
+                sadboySoloRank: res[0].rankedSeasons[8][10].tier,
+                sadboyDoublesRank: res[0].rankedSeasons[8][11].tier,
+                sadboyStandardRank: res[0].rankedSeasons[8][13].tier,
+                sadboySSRank: res[0].rankedSeasons[8][12].tier,
+                zenlosGoals: res[1].stats.goals,
+                zenlosAssists: res[1].stats.assists,
+                zenlosSaves: res[1].stats.saves,
+                zenlosSoloRank: res[1].rankedSeasons[8][10].tier,
+                zenlosDoublesRank: res[1].rankedSeasons[8][11].tier,
+                zenlosStandardRank: res[1].rankedSeasons[8][13].tier,
+                zenlosSSRank: res[1].rankedSeasons[8][12].tier,
+                cierexGoals: res[2].stats.goals,
+                cierexAssists: res[2].stats.assists,
+                cierexSaves: res[2].stats.saves,
+                cierexSoloRank: res[2].rankedSeasons[8][10].tier,
+                cierexDoublesRank: res[2].rankedSeasons[8][11].tier,
+                cierexStandardRank: res[2].rankedSeasons[8][13].tier,
+                cierexSSRank: res[2].rankedSeasons[8][12].tier,
+                loading: false
+            });
         });
-
-        console.log("After fetch: " + this.state.sadboyGoals);
-
-        // this.makePlayerRequest(client);
     }
 
-    makePlayerRequest = client => {
-        client.getPlayer("76561198168703285", rls.platforms.STEAM, function(status, data){
-            if(status === 200){
-                console.log("-- Player Data:");
-                console.log("   Display name: " + data.displayName);
-                console.log("   Goals: " + data.stats.goals);
-                console.log("   Assists: " + data.stats.assists);
-                console.log("   Saves: " + data.stats.saves);
-                let goals = data.stats.goals;
-                let assists = data.stats.assists;
-                let saves = data.stats.saves;
-
-                // this.setStats(goals, assists, saves);
-
-                this.setState({
-                    sadboyGoals: goals
-                });
-                console.log(goals + " " + assists + " " + saves);
-            } else {
-                console.log("-- getPlayer failed: " + status);
-            }
-        });
-    };
-
-    setStats = (goals, assists, saves) => {
-        this.setState({
-            sadboyGoals: goals,
-            sadboyAssists: assists,
-            sadboySaves: saves,
-        })
-    };
-
     render () {
-
         if (this.state.loading === true) {
             return (
-                <div className="Loader">
+                <div className="loader">
                     <p>Loading...</p>
                 </div>
             );
-        } else {
+        }
+
+        if (this.state.loading === false) {
             return (
                 <div className="CardView">
                     <PlayerCard
                         name={"Cierex"}
                         img={cierex}
-                        rank={ranks.bronze_1} />
+                        soloRank={this.state.cierexSoloRank}
+                        doublesRank={this.state.cierexDoublesRank}
+                        standardRank={this.state.cierexStandardRank}
+                        ssRank={this.state.cierexSSRank}
+                        goals={this.state.cierexGoals}
+                        assists={this.state.cierexAssists}
+                        saves={this.state.cierexSaves} />
                     <PlayerCard
                         name={"s a d b o y"}
                         img={sadboy}
-                        rank={ranks.gc} />
+                        soloRank={this.state.sadboySoloRank}
+                        doublesRank={this.state.sadboyDoublesRank}
+                        standardRank={this.state.sadboyStandardRank}
+                        ssRank={this.state.sadboySSRank}
+                        goals={this.state.sadboyGoals}
+                        assists={this.state.sadboyAssists}
+                        saves={this.state.sadboySaves} />
                     <PlayerCard
                         name={"Zenlos"}
                         img={zenlos}
-                        rank={ranks.champ_2} />
+                        soloRank={this.state.zenlosSoloRank}
+                        doublesRank={this.state.zenlosDoublesRank}
+                        standardRank={this.state.zenlosStandardRank}
+                        ssRank={this.state.zenlosSSRank}
+                        goals={this.state.zenlosGoals}
+                        assists={this.state.zenlosAssists}
+                        saves={this.state.zenlosSaves} />
                 </div>
             );
         }
