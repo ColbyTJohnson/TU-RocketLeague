@@ -4,6 +4,9 @@ Welcome! This is just a little project to utilize React.js and create a home pag
 
 [The website will be here at some point](#)
 
+## Latest Screenshot
+![WIP Screenshot](https://user-images.githubusercontent.com/20494455/42138372-87860630-7d4a-11e8-9085-31f85955c746.png)
+
 ## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)  
 Stats are powered by: [https://rocketleaguestats.com](https://rocketleaguestats.com)  
