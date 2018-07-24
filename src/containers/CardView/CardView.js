@@ -8,6 +8,7 @@ import './CardView.css';
 import cierex from '../../assets/cie.jpg';
 import sadboy from '../../assets/sad.jpg';
 import zenlos from '../../assets/zen.jpg';
+import perino from '../../assets/perino.png';
 
 class CardView extends Component {
     state = {
@@ -176,7 +177,7 @@ class CardView extends Component {
                             saves={this.state.sadboySaves} />
                         <PlayerCard
                             name={"Perino"}
-                            img={zenlos}
+                            img={perino}
                             soloRank={this.state.perinoSoloRank}
                             doublesRank={this.state.perinoDoublesRank}
                             standardRank={this.state.perinoStandardRank}
