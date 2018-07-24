@@ -1,6 +1,5 @@
 .App {
     font-family: 'Titillium Web', sans-serif;
-    display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.05), #000), url(./assets/stadium_bg.jpg);
@@ -9,12 +8,22 @@
     height: 100vh;
     padding: 0;
     background-attachment: fixed;
+    background-repeat:no-repeat;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -ms-content-zooming: none;
+    position:absolute;
+    width:100%;
+    overflow: scroll;
 }
 
 .App-content {
     color: white;
     flex: 1 0 auto;
     width: 100%;
+    overflow: no-display;
+    padding-bottom: 120px;
 }
 .App-content:after {
     display: block;

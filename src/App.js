@@ -10,9 +10,9 @@ class App extends Component {
         return (
             <div className="App">
                 <Header />
-                    <div className="App-content">
-                        <CardView />
-                    </div>
+                <div className="App-content">
+                    <CardView />
+                </div>
                 <Footer />
             </div>
         );

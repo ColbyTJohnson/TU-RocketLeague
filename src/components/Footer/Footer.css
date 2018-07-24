@@ -18,4 +18,9 @@
     height: 120px;
     color: white;
     text-align: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow:hidden;
 }

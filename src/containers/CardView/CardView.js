@@ -32,6 +32,27 @@ class CardView extends Component {
         cierexDoublesRank: 0,
         cierexStandardRank: 0,
         cierexSSRank: 0,
+        perinoGoals: 0,
+        perinoAssists: 0,
+        perinoSaves: 0,
+        perinoSoloRank: 0,
+        perinoDoublesRank: 0,
+        perinoStandardRank: 0,
+        perinoSSRank: 0,
+        crucioGoals: 0,
+        crucioAssists: 0,
+        crucioSaves: 0,
+        crucioSoloRank: 0,
+        crucioDoublesRank: 0,
+        crucioStandardRank: 0,
+        crucioSSRank: 0,
+        spookyGoals: 0,
+        spookyAssists: 0,
+        spookySaves: 0,
+        spookySoloRank: 0,
+        spookyDoublesRank: 0,
+        spookyStandardRank: 0,
+        spookySSRank: 0,
         loading: true,
     };
 
@@ -46,15 +67,27 @@ class CardView extends Component {
             body: JSON.stringify([
                     {
                         "platformId": "1",
-                        "uniqueId": "76561198168703285",
+                        "uniqueId": Keys.sadboyId,
                     },
                     {
                         "platformId": "1",
-                        "uniqueId": "76561198073429696",
+                        "uniqueId": Keys.zenlosId,
                     },
                     {
                         "platformId": "1",
-                        "uniqueId": "76561198067709994",
+                        "uniqueId": Keys.cierexId,
+                    },
+                    {
+                        "platformId": "1",
+                        "uniqueId": Keys.perinoId,
+                    },
+                    {
+                        "platformId": "1",
+                        "uniqueId": Keys.crucioId,
+                    },
+                    {
+                        "platformId": "1",
+                        "uniqueId": Keys.spookyId,
                     }
                 ])
         }).then(res => {
@@ -82,6 +115,27 @@ class CardView extends Component {
                 cierexDoublesRank: res[2].rankedSeasons[8][11].tier,
                 cierexStandardRank: res[2].rankedSeasons[8][13].tier,
                 cierexSSRank: res[2].rankedSeasons[8][12].tier,
+                perinoGoals: res[3].stats.goals,
+                perinoAssists: res[3].stats.assists,
+                perinoSaves: res[3].stats.saves,
+                perinoSoloRank: res[3].rankedSeasons[8][10].tier,
+                perinoDoublesRank: res[3].rankedSeasons[8][11].tier,
+                perinoStandardRank: res[3].rankedSeasons[8][13].tier,
+                perinoSSRank: res[3].rankedSeasons[8][12].tier,
+                crucioGoals: res[4].stats.goals,
+                crucioAssists: res[4].stats.assists,
+                crucioSaves: res[4].stats.saves,
+                crucioSoloRank: res[4].rankedSeasons[8][10].tier,
+                crucioDoublesRank: res[4].rankedSeasons[8][11].tier,
+                crucioStandardRank: res[4].rankedSeasons[8][13].tier,
+                crucioSSRank: res[4].rankedSeasons[8][12].tier,
+                spookyGoals: res[5].stats.goals,
+                spookyAssists: res[5].stats.assists,
+                spookySaves: res[5].stats.saves,
+                spookySoloRank: res[5].rankedSeasons[8][10].tier,
+                spookyDoublesRank: res[5].rankedSeasons[8][11].tier,
+                spookyStandardRank: res[5].rankedSeasons[8][13].tier,
+                spookySSRank: res[5].rankedSeasons[8][12].tier,
                 loading: false
             });
         });
@@ -98,37 +152,71 @@ class CardView extends Component {
 
         if (this.state.loading === false) {
             return (
-                <div className="CardView">
-                    <PlayerCard
-                        name={"Cierex"}
-                        img={cierex}
-                        soloRank={this.state.cierexSoloRank}
-                        doublesRank={this.state.cierexDoublesRank}
-                        standardRank={this.state.cierexStandardRank}
-                        ssRank={this.state.cierexSSRank}
-                        goals={this.state.cierexGoals}
-                        assists={this.state.cierexAssists}
-                        saves={this.state.cierexSaves} />
-                    <PlayerCard
-                        name={"s a d b o y"}
-                        img={sadboy}
-                        soloRank={this.state.sadboySoloRank}
-                        doublesRank={this.state.sadboyDoublesRank}
-                        standardRank={this.state.sadboyStandardRank}
-                        ssRank={this.state.sadboySSRank}
-                        goals={this.state.sadboyGoals}
-                        assists={this.state.sadboyAssists}
-                        saves={this.state.sadboySaves} />
-                    <PlayerCard
-                        name={"Zenlos"}
-                        img={zenlos}
-                        soloRank={this.state.zenlosSoloRank}
-                        doublesRank={this.state.zenlosDoublesRank}
-                        standardRank={this.state.zenlosStandardRank}
-                        ssRank={this.state.zenlosSSRank}
-                        goals={this.state.zenlosGoals}
-                        assists={this.state.zenlosAssists}
-                        saves={this.state.zenlosSaves} />
+                <div className="Content">
+                    <div className="CardView">
+                        <PlayerCard
+                            name={"Cierex"}
+                            img={cierex}
+                            soloRank={this.state.cierexSoloRank}
+                            doublesRank={this.state.cierexDoublesRank}
+                            standardRank={this.state.cierexStandardRank}
+                            ssRank={this.state.cierexSSRank}
+                            goals={this.state.cierexGoals}
+                            assists={this.state.cierexAssists}
+                            saves={this.state.cierexSaves} />
+                        <PlayerCard
+                            name={"s a d b o y"}
+                            img={sadboy}
+                            soloRank={this.state.sadboySoloRank}
+                            doublesRank={this.state.sadboyDoublesRank}
+                            standardRank={this.state.sadboyStandardRank}
+                            ssRank={this.state.sadboySSRank}
+                            goals={this.state.sadboyGoals}
+                            assists={this.state.sadboyAssists}
+                            saves={this.state.sadboySaves} />
+                        <PlayerCard
+                            name={"Perino"}
+                            img={zenlos}
+                            soloRank={this.state.perinoSoloRank}
+                            doublesRank={this.state.perinoDoublesRank}
+                            standardRank={this.state.perinoStandardRank}
+                            ssRank={this.state.perinoSSRank}
+                            goals={this.state.perinoGoals}
+                            assists={this.state.perinoAssists}
+                            saves={this.state.perinoSaves} />
+                    </div>
+                    <div className="CardView">
+                        <PlayerCard
+                            name={"Zenlos"}
+                            img={zenlos}
+                            soloRank={this.state.crucioSoloRank}
+                            doublesRank={this.state.crucioDoublesRank}
+                            standardRank={this.state.crucioStandardRank}
+                            ssRank={this.state.crucioSSRank}
+                            goals={this.state.crucioGoals}
+                            assists={this.state.crucioAssists}
+                            saves={this.state.crucioSaves} />
+                        <PlayerCard
+                            name={"cRUCiO"}
+                            img={sadboy}
+                            soloRank={this.state.crucioSoloRank}
+                            doublesRank={this.state.crucioDoublesRank}
+                            standardRank={this.state.crucioStandardRank}
+                            ssRank={this.state.crucioSSRank}
+                            goals={this.state.crucioGoals}
+                            assists={this.state.crucioAssists}
+                            saves={this.state.crucioSaves} />
+                        <PlayerCard
+                            name={"sp00ky"}
+                            img={zenlos}
+                            soloRank={this.state.spookySoloRank}
+                            doublesRank={this.state.spookyDoublesRank}
+                            standardRank={this.state.spookyStandardRank}
+                            ssRank={this.state.spookySSRank}
+                            goals={this.state.spookyGoals}
+                            assists={this.state.spookyAssists}
+                            saves={this.state.spookySaves} />
+                    </div>
                 </div>
             );
         }

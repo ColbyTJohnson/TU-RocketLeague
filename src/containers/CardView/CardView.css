@@ -1,9 +1,16 @@
+.Content {
+    padding-top: 48px;
+    overflow: scroll;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 .CardView {
     margin: 0 5%;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .loader,
