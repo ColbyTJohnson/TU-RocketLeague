@@ -190,13 +190,13 @@ class CardView extends Component {
                         <PlayerCard
                             name={"Zenlos"}
                             img={zenlos}
-                            soloRank={this.state.crucioSoloRank}
-                            doublesRank={this.state.crucioDoublesRank}
-                            standardRank={this.state.crucioStandardRank}
-                            ssRank={this.state.crucioSSRank}
-                            goals={this.state.crucioGoals}
-                            assists={this.state.crucioAssists}
-                            saves={this.state.crucioSaves} />
+                            soloRank={this.state.zenlosSoloRank}
+                            doublesRank={this.state.zenlosDoublesRank}
+                            standardRank={this.state.zenlosStandardRank}
+                            ssRank={this.state.zenlosSSRank}
+                            goals={this.state.zenlosGoals}
+                            assists={this.state.zenlosAssists}
+                            saves={this.state.zenlosSaves} />
                         <PlayerCard
                             name={"cRUCiO"}
                             img={sadboy}
